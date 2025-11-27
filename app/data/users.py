@@ -24,4 +24,5 @@ def insert_user(username, password_hash, role='user'):
     conn.close()
 
 def placeholder():
+    print("Test")
     pass
