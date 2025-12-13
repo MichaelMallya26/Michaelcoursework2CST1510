@@ -27,13 +27,17 @@ print(f"Original Password: {test_password}")
 print(f"Hashed Password: {hashed}")
 print(f"Hash length: {len(hashed)} characters")
 
+def verify_password(password: str, hashed: str)-> bool:
+
+
 #Test verification with correct password
 is_valid = verify_password(test_password, hashed)
 print(f"\nVerification with correct password: {is_valid}")
 
+
 # Test verification with incorrect password
-is_valid = verify_password("wrong password",hashed)
-print(f"Verification with incorrect password: {is_valid}")
+is_valid = verify_password("wrong password", hashed)
+print(f"\nVerification with incorrect password: {is_valid}")
 
 USER_DATA_FILE= "users.txt"
 
@@ -78,6 +82,7 @@ def main():
         choice = input("\nPlease select an option (1-3): ").strip()
 
         if choice == '1':
-            #Regisrtation flow
-    print("\n--- USER REGISTRATION ---")
-    username = input("Username: ")
+            # Registration flow
+            print("\n--- USER REGISTRATION ---")
+            username = input("Username: ")
+

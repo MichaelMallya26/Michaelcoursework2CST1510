@@ -91,15 +91,14 @@ def run_comprehensive_tests():
         "test_user"
     )
     print(f"  Create: ✅ Incident #{test_id} created")
-    
-    # Read
+    #read
     df = pd.read_sql_query(
         "SELECT * FROM cyber_incidents WHERE id = ?",
         conn,
         params=(test_id,)
     )
     print(f"  Read:    Found incident #{test_id}")
-    
+
     # Update
     update_incident_status(conn, test_id, "Resolved")
     print(f"  Update:  Status updated")
